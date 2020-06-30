@@ -1,0 +1,97 @@
+body{
+    background: #444;
+    color: snow;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    font-size: 30px;
+}
+
+.form, .greetings{
+    display: none;
+    font-size: 5rem;
+    margin: 0 0 100px 0;
+}
+
+.greetings:hover{
+    cursor: pointer;
+}
+
+.showing{
+    display: block;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.bgImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn .5s linear;
+}
+
+.clock{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.todoList{
+    font-weight: bold;
+    font-size: 3rem;
+    padding: 0;
+}
+
+.todoList li{
+    display: flex;
+    align-items: center;
+}
+
+.todoList span{
+    margin-right: 2rem;
+}
+
+.todoList button{
+    font-size: 1.5rem;
+    height: 50%;
+}
+
+.weather{
+    position: fixed;
+    font-weight: bold;
+    top: 2%;
+    right: 2%;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 600px){
+    .greetings{
+        font-size: 3rem;
+    }
+
+    .clock{
+        font-size: 2rem;
+    }
+
+    .weather{
+        top: auto;
+        bottom:2%;
+        right: auto;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+}
