@@ -1,5 +1,7 @@
 const table = document.querySelector('.table');
 
+let isGenRandomNum = true;
+
 function setTable(){
     let temp = 0;
 
@@ -25,22 +27,26 @@ function genRandomNum(){
 
     document.querySelector('.table').classList.add('setNum');
 
-    for(let i = 1; i < num + 1; i++){
-        numArr.push(i);
-    }
+    if(isGenRandomNum){
+        isGenRandomNum = false;
 
-    for(var i = 0; i < num ; i++)
-    {
-        let temp = 0;
-        const ranNum = Math.floor(Math.random() * 25);
-        temp = numArr[i];
-        numArr[i] = numArr[ranNum];
-        numArr[ranNum] = temp;
-    }
-
-    for(let i = 0; i < num; i++){
-        document.querySelector(`#td${i}`).innerText = `${numArr[i]}`;
-        document.querySelector(`#td${i}`).classList.add('isPlaying');
+        for(let i = 1; i < num + 1; i++){
+            numArr.push(i);
+        }
+    
+        for(var i = 0; i < num ; i++)
+        {
+            let temp = 0;
+            const ranNum = Math.floor(Math.random() * 25);
+            temp = numArr[i];
+            numArr[i] = numArr[ranNum];
+            numArr[ranNum] = temp;
+        }
+    
+        for(let i = 0; i < num; i++){
+            document.querySelector(`#td${i}`).innerText = `${numArr[i]}`;
+            document.querySelector(`#td${i}`).classList.add('isPlaying');
+        }
     }
 }
 

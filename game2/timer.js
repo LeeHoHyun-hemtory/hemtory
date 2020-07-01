@@ -5,6 +5,7 @@ let seconds = 0;
 let minutes = 0;
 let milliSeconds = 0;
 let interval = null;
+let isTimer = true;
 
 function getTimer(m, s, ms){
     return `0${m} : ${s < 10 ? `0${s}` : `${s}`} : ${ms}`;
@@ -32,13 +33,20 @@ function showTimer(){
 }
 
 function timerStart(){
-    minutes = seconds = milliSeconds = 0;
-    timer.innerHTML = getTimer(minutes, seconds, milliSeconds);
-
-    interval = setInterval(showTimer, 100);
+    if(isTimer){
+        isTimer = false;
+        minutes = seconds = milliSeconds = 0;
+        timer.innerHTML = getTimer(minutes, seconds, milliSeconds);
+    
+        interval = setInterval(showTimer, 100);
+    }
 }
 
 function timerStop(){
+    isPlaying = true;
+    isTimer = true;
+    isGenRandomNum = true;
+    
     clearInterval(interval);
 
     for(let i = 0; i < 25; i++){

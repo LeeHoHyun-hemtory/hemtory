@@ -3,14 +3,19 @@ const btnStop = document.querySelector('.btnStop');
 const record = document.querySelector('.record');
 
 let currentNum = 0;
+let isPlaying = true;
 
 function startGame(){
-    const length = numbers.length;
+    if(isPlaying){
+        isPlaying = false;
 
-    currentNum = 0;
-
-    for(let i = 0; i < length; i++){
-        numbers[i].addEventListener('click', numClick);
+        const length = numbers.length;
+    
+        currentNum = 0;
+    
+        for(let i = 0; i < length; i++){
+            numbers[i].addEventListener('click', numClick);
+        }
     }
 }
 
@@ -23,6 +28,9 @@ function numClick(event){
     }
     
     if(currentNum === 25){
+        isPlaying = true;
+        isTimer = true;
+        isGenRandomNum = true;
         timerStop();
         record.innerHTML = `기록 : ${timer.innerHTML}`;
         modalContainer.classList.add('modalOn');
