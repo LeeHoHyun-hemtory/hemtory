@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-top{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80%;
+}
+
+.container-bottom{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 20%;
+}
+
+.table-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+}
+
+.ranking-container{
+    width: 30%;
+    height: 100%;
+}
+
+.game-table{
+    width: 80%;
+    height: 90%;
+}
+
+.table{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.table td{
+    width: 20%;
+    height: 20%;
+}
+
+.setNum:hover{
+    cursor: pointer;
+}
+
+.timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+}
+
+.timer div{
+    font-size: 3rem;
+    border: 5px black solid;
+    padding: 15px;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+
+.button-container button{
+    font-size: 2rem;
+    margin: 10px;
+}
+
+.modalOn{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalOn > div{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    background: pink;
+}
+
+.modalOn > div div{
+    margin: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.modalOn button{
+    position: absolute;
+    bottom: 10%;
+    font-size: 2rem;
+    border: 3px solid black;
+    padding: 5px 10px;
+}
