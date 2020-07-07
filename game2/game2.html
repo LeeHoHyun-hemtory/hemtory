@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,4 +43,50 @@
     <script src="./gamePlaying.js"></script>
     <script src="./gameComplete.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./game2.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-top">
+            <div class="table-container">
+                <div class="game-table">
+                    <table class="table" border="10">
+                    </table>
+                </div>
+            </div>
+            <div class="ranking-container">
+                <h1>RANKING</h1>
+            </div>
+        </div>
+        <div class="container-bottom">
+            <div class="timer">
+                <div>00 : 00 : 0</div>
+            </div>
+            <div class="button-container">
+                <button onclick="timerStart(); genRandomNum(); startGame();">GAME START</button>
+                <button onclick="timerStop();">GAME STOP</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container">
+        <div>
+            <div>숫자를 모두 찾았습니다.</div>
+            <div class="record"></div>
+            <button onclick="modalOff();">닫 기</button>
+        </div>
+    </div>
+
+    <script src="./timer.js"></script>
+    <script src="./setTable.js"></script>
+    <script src="./gamePlaying.js"></script>
+    <script src="./gameComplete.js"></script>
+</body>
+>>>>>>> main_page
 </html>
