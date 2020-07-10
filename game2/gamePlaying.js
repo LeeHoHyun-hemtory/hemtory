@@ -1,6 +1,7 @@
 const numbers = document.querySelectorAll('td');
 const btnStop = document.querySelector('.btnStop');
 const record = document.querySelector('.record');
+const modalContainer = document.getElementById('modal-container');
 
 let currentNum = 0;
 let isPlaying = true;
@@ -33,6 +34,6 @@ function numClick(event){
         isGenRandomNum = true;
         timerStop();
         record.innerHTML = `기록 : ${timer.innerHTML}`;
-        modalContainer.classList.add('modalOn');
+        modalContainer.style.display = 'block';
     }
 }
