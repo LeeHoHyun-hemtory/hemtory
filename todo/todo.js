@@ -16,8 +16,6 @@ function deleteTodo(event){
         return todo.id !== parseInt(li.id);  
     });
 
-    console.log(cleanTodos);
-
     todos = cleanTodos;
 
     saveTodos();
