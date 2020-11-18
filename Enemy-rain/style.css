@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#bg {
+  width: 100%;
+  height: 100vh;
+  background: url("images/bg.png");
+}
+
+.heroDiv {
+  position: absolute;
+  top: 50vh;
+  width: 35px;
+  height: 54px;
+  background: url("images/hero.png") 0 0;
+}
+
+.enemyDiv {
+  position: absolute;
+  width: 45px;
+  height: 54px;
+  background: url("images/enemy.png") 0 0;
+}
