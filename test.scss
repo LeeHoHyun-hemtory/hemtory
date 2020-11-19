@@ -1,0 +1,8 @@
+$i: 1;
+
+@while $i < 4{
+    .test-#{$i}{
+        width: 10px * $i;
+    }
+    $i: $i + 1;
+}

@@ -6,12 +6,40 @@ body {
 #bg {
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: url("images/bg.png");
+}
+
+.initDiv {
+  width: 100%;
+  height: 60vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gameName {
+  font-size: 8rem;
+  margin-top: 0;
+  color: aliceblue;
+}
+
+.button {
+  font-size: 4rem;
+}
+
+.button:hover {
+  background-color: aquamarine;
 }
 
 .heroDiv {
   position: absolute;
   top: 50vh;
+  left: 0;
   width: 35px;
   height: 54px;
   background: url("images/hero.png") 0 0;
