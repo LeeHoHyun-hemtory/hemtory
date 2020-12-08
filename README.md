@@ -1,7 +1,7 @@
 # HTML, CSS, JS 테스트 레포
 
 ## CodeGolf
-### CodeGolf 책 코드 내용
+- CodeGolf 책 코드 내용
 
 ## Enemy-rain
 
