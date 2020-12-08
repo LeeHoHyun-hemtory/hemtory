@@ -1,59 +1,71 @@
-const data = [
-  {
-    "time": "2020.5.3 0:00",
-    "EC_slab1": 5.438761,
-    "EC_slab2": 4.931374,
-    "EC_drain_PC": 6.3,
-    "WC_slab1": 67.476,
-    "WC_slab2": 56.932,
-    "CO2air": 560.0000004,
-    "HumDef": 1.629999997,
-    "Rhair": 90.3,
-    "Tair": 19.6,
-    "EnScr": 0,
-    "BlackScr": 95,
-    "PipeGrow": 36.59999999,
-    "PipeLow": 0,
-    "Iglob": 0,
-    "RadSum": 2162.999782,
-    "Tout": 9.99999998
-  },
-  {
-    "time": "2020.5.3 0:05",
-    "EC_slab1": 5.436839,
-    "EC_slab2": 4.924302,
-    "EC_drain_PC": 6.33,
-    "WC_slab1": 67.476,
-    "WC_slab2": 56.932,
-    "CO2air": 563.9999996,
-    "HumDef": 1.600000003,
-    "Rhair": 90.5,
-    "Tair": 19.6,
-    "EnScr": 0,
-    "BlackScr": 95,
-    "PipeGrow": 36.50000001,
-    "PipeLow": 0,
-    "Iglob": 0,
-    "RadSum": 0.000217561,
-    "Tout": 9.80000002
+// // var partial = function () {
+// //   var originalPartialArgs = arguments;
+// //   var func = originalPartialArgs[0];
+// //   if(typeof func !== 'function') {
+// //     throw new Error('첫 번째 인자가 함수가 아닙니다.');
+// //   }
+// //   return function() {
+// //     var partialArgs = Array.prototype.slice.call(originalPartialArgs, 1);
+// //     var restArgs = Array.prototype.slice.call(arguments);
+
+// //     return func.apply(this, partialArgs.concat(restArgs));
+// //   }
+// // }
+
+// // var add = function() {
+// //   var result = 0;
+// //   for(var i = 0; i < arguments.length; i++) {
+// //     result += arguments[i];
+// //   }
+// //   return result;
+// // }
+
+// // var addPartial = partial(add, 1, 2, 3, 4, 5);
+// // console.log(addPartial(6, 7, 8, 9, 10));
+
+// // var dog = {
+// //   name: '강아지',
+// //   greet: partial(function(prefix, suffix) {
+// //     return prefix + this.name + suffix;
+// //   }, '왈왈, ')
+// // };
+// // console.log(dog.greet('입니다'))
+
+// var debounce = function(eventName, func, wait) {
+//   var timeoutId = null;
+//   return function(event) {
+//     var self = this;
+//     console.log(eventName, 'event 발생');
+//     clearTimeout(timeoutId);
+//     timeoutId = setTimeout(func.bind(self, event), wait);
+//   };
+// };
+
+// var moveHandler = function(e) {
+//   console.log('move event 처리');
+// };
+
+// var wheelHandler = function(e) {
+//   console.log('wheel event 처리');
+// };
+// const a = document.querySelector('.a');
+// a.addEventListener('mousemove', debounce('move', moveHandler, 500));
+// a.addEventListener('mousewheel', debounce('wheel', wheelHandler, 700));
+
+// for(let i = 0; true;) {
+//   console.log(++i);
+//   if(i === 5) {
+//     break;
+//   }
+// }
+
+i = [j = 9, k = l = ((m = 8) / 2)];
+console.log(i)
+
+let n = 0;
+for(;;) {
+  console.log(n++);
+  if(n > 5) {
+    break;
   }
-];
-
-const obj = {...data[0]}
-
-for(let key in obj) {
-  obj[key] = [];
 }
-
-data.forEach(el => {
-  for(let key in el) {
-    obj[key].push(el[key]);
-  }
-})
-
-const arr = Object.keys(obj).map(el => ({name: el}));
-
-arr.forEach(el => {
-  el['data'] = [...obj[el.name]];
-})
-console.log(arr);
