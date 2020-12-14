@@ -1,5 +1,12 @@
 # HTML, CSS, JS 테스트 레포
 
+## tech stack
+- HTML
+- CSS
+- javascript
+
+---
+
 ## CodeGolf
 - CodeGolf 책 코드 내용
 
